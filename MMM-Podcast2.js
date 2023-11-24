@@ -15,7 +15,8 @@ Module.register('MMM-Podcast2', {
 	defaults: {
 		refreshInterval: 1000 * 1800, //refresh every 1800 seconds (30Min)
 		feedUrl: 'https://www.tagesschau.de/export/video-podcast/webxl/tagesschau-in-100-sekunden_https/',
-		omxargs: ' --win 320,180,1600,900 -o both '
+		videoplayer: 'mpv',
+		videoargs: '--geometry=75%+50%+50% --volume=75 --no-border',
 	},
 	
 	// Define required scripts.

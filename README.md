@@ -22,7 +22,8 @@ To use this module, add it to the modules array in the `config/config.js` file:
 	config: {
 		feedUrl: 'https://www.tagesschau.de/export/video-podcast/webxl/tagesschau-in-100-sekunden_https/',
 		refreshInterval: 1000 * 1800, //refreshs streaming link every 1800 seconds (30Min)
-		omxargs: ' --win 320,180,1600,900  -o both '
+		videoplayer: 'mpv', // omxplayer | cvlc | mpv
+		videoargs: '--geometry=75%+50%+50% --volume=75 --no-border', //  mpv default 
 		}
 },
 ````

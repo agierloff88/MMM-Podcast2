@@ -22,6 +22,7 @@ module.exports = NodeHelper.create({
 	},
 
 	socketNotificationReceived: function(notification, payload) {
+				
 		var self = this;
 		if (notification === 'CONFIG' && self.started == false) {
 			self.config = payload;
@@ -34,10 +35,10 @@ module.exports = NodeHelper.create({
 		if (notification === "BUTTON_PRESSED") {
 			if (payload[1] === 'PLAY') {
 				console.log('MMM-Podcast2 PLAY:'); 
-				exec('omxplayer '+self.config.omxargs+payload[0], null);//without --live buffering works
+				exec(self.config.videoplayer + ' ' + self.config.videoargs + ' ' + payload[0], null);//without --live buffering works
 			} else {
 				console.log('MMM-Podcast2 STOP:'); 
-				exec('pkill omxplayer', null);
+				exec('pkill ' + self.config.videoplayer, null);
 			}
 			self.getData2();
 		}
