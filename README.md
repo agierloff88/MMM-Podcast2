@@ -49,8 +49,12 @@ The following properties can be configured:
 			<td>refreshs streaming link <code>default: 1000 * 1800</code> Refreshs streaming link every 1800 seconds (30Min).</td>
 		</tr>
 		<tr>
-			<td><code>omxargs</code></td>
-			<td>Arguments for the omxplayer, like <code>' --win 320,180,1600,900  -o both '</code>. Attention, <b>leading</b> and <b>last</b> blanks are required.</td>
+			<td><code>videoplayer</code></td>
+			<td>Videoplayer used under the hood. Possibilities: mvp, omxplayer, cvlc (vlcplayer) Default: mpv Note: Player needs to be installed</td>
+		</tr>
+		<tr>
+			<td><code>videoargs</code></td>
+			<td>Arguments for the choosen videoplayer, like <code>'--geometry=75%+50%+50% --volume=75 --no-border'</code>. Attention: Theese are specific to the used videoplayer</td>
 		</tr>
    </table>
 
