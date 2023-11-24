@@ -61,12 +61,13 @@ function xml2jsonRecurse(xmlStr) {
 // Removes some characters that would break the recursive function.
 //*****************************************************************
 function cleanXML(xmlStr) {
-    
+
     xmlStr = xmlStr.replace( /<!--[\s\S]*?-->/g, '' ); //remove commented lines
     xmlStr = xmlStr.replace(/\n|\t|\r/g, ''); //replace special characters
     xmlStr = xmlStr.replace(/ {1,}<|\t{1,}</g, '<'); //replace leading spaces and tabs
     xmlStr = xmlStr.replace(/> {1,}|>\t{1,}/g, '>'); //replace trailing spaces and tabs
     xmlStr = xmlStr.replace(/<\?[^>]*\?>/g, ''); //delete docType tags
+    xmlStr = xmlStr.replace(/<![CDATA[\s\S]*?]]>/g, ''); //delete CDATA
 
     xmlStr = replaceSelfClosingTags(xmlStr); //replace self closing tags
     xmlStr = replaceAloneValues(xmlStr); //replace the alone tags values
