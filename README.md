@@ -1,5 +1,8 @@
 # MMM-Podcast2
-A module to stream Tagesschau 100 Sekunden to your magic mirror
+A module to stream Tagesschau 100 Sekunden to your magic mirror.
+This is a fork of [Ax-LED/MMM-Podcast2](https://github.com/Ax-LED/MMM-Podcast2)
+It includes a bugfix to correctly parse the RSS Tagesschau feed
+Also it makes it possible to use the module with either mpv or vlc player in addition to deprecated omxplayer
 
 
 ## Requirements
