@@ -3,6 +3,8 @@ A module to stream Tagesschau 100 Sekunden to your magic mirror
 
 
 ## Requirements
+Any of the following Videoplayers: mpv, vlc, omxplayer
+
 <b>omxplayer:</b> Omxplayer is normally already installed on raspbian. You can check it by commmanline ````which omxplayer````. The result should be a path like ````/usr/bin/omxplayer````.
 <br>
 <b>MMM-Remote-Control:</b> [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) is required, if you want to use the sample links for communication, as mentioned at the end of this file.
@@ -66,4 +68,4 @@ The following properties can be configured:
    To use this examples the module [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) is required.
 
    ## Version
-   1.0 initial release
+   2.0 
